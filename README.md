@@ -107,4 +107,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+<img width="948" height="532" alt="WhatsApp Image 2026-06-22 at 13 20 11" src="https://github.com/user-attachments/assets/183c8bc6-4545-430a-8d4a-283313d2efb3" />
+
+<img width="927" height="597" alt="WhatsApp Image 2026-06-22 at 13 20 12 (1)" src="https://github.com/user-attachments/assets/57b0e7e4-9846-41a4-b7c2-e936a491fee8" />
+
+<img width="911" height="300" alt="WhatsApp Image 2026-06-22 at 13 20 12 (2)" src="https://github.com/user-attachments/assets/fdded9b5-f98f-44c5-845e-0b4df44326bb" />
+
+<img width="916" height="562" alt="WhatsApp Image 2026-06-22 at 13 20 12" src="https://github.com/user-attachments/assets/cc2df452-efe8-4da4-92c7-286dd1233fe7" />
+
 <img width="907" height="341" alt="WhatsApp Image 2026-06-22 at 13 20 12 (3)" src="https://github.com/user-attachments/assets/3f8dcf43-6d89-4cd9-a008-e047270947b0" />
+
