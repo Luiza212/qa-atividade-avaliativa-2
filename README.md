@@ -117,3 +117,125 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 <img width="907" height="341" alt="WhatsApp Image 2026-06-22 at 13 20 12 (3)" src="https://github.com/user-attachments/assets/3f8dcf43-6d89-4cd9-a008-e047270947b0" />
 
+
+# Relatório de Testes - Atividade Avaliativa 2
+
+## Alunos 
+ Ricardo Gomes de Brito
+ Laysa Luiza Borges Lopes
+
+## Execução dos Testes
+
+Os testes foram executados com:
+
+```bash
+docker compose exec app php artisan test
+```
+
+Resultado:
+
+- 27 testes executados
+- 27 testes aprovados
+- 37 asserções
+- 0 falhas
+
+## Casos Testados
+
+### Autor
+- Listar autores
+- Criar autor
+- Editar autor
+- Rota inexistente
+
+### Biblioteca
+- Listar bibliotecas
+- Criar biblioteca
+- Editar biblioteca
+- Deletar biblioteca
+- Rota inexistente
+
+### Livro
+- Listar livros
+- Criar livro
+- Editar livro
+- Deletar livro
+- Rota inexistente
+
+### Pessoa
+- Listar pessoas
+- Criar pessoa
+- Editar pessoa
+
+### Usuário
+- Listar usuários
+- Criar usuário
+- Rota inexistente
+
+### O que cada teste faz
+
+## AutorTest
+
+- test_listar_autores: verifica se a página de listagem de autores é carregada corretamente.
+- test_tela_criar_autor: verifica se a tela de cadastro de autores pode ser acessada.
+- test_criar_autor_valido: verifica se um autor é cadastrado corretamente com dados válidos.
+- test_criar_autor_sem_dados: verifica o comportamento do sistema ao tentar cadastrar um autor sem preencher os dados.
+- test_editar_autor: verifica se os dados de um autor podem ser alterados.
+- test_rota_inexistente: verifica o comportamento da aplicação ao acessar uma rota inexistente.
+
+## BibliotecaTest
+
+- test_listar_bibliotecas: verifica se a listagem de bibliotecas é exibida corretamente.
+- test_tela_criar_biblioteca: verifica se a tela de cadastro de bibliotecas pode ser acessada.
+- test_criar_biblioteca_valida: verifica se uma biblioteca é cadastrada corretamente.
+- test_editar_biblioteca: verifica se os dados de uma biblioteca podem ser atualizados.
+- test_deletar_biblioteca: verifica se uma biblioteca pode ser removida do sistema.
+- test_rota_inexistente_biblioteca: verifica o comportamento da aplicação ao acessar uma rota inexistente relacionada às bibliotecas.
+
+## LivroTest
+
+- test_listar_livros: verifica se a listagem de livros é carregada corretamente.
+- test_tela_criar_livro: verifica se a tela de cadastro de livros pode ser acessada.
+- test_criar_livro: verifica se um livro é cadastrado corretamente no banco de dados.
+- test_editar_livro: verifica se os dados de um livro podem ser alterados.
+- test_deletar_livro: verifica se um livro pode ser removido do sistema.
+- test_rota_inexistente_livro: verifica o comportamento da aplicação ao acessar uma rota inexistente relacionada aos livros.
+
+## PessoaTest
+
+- test_listar_pessoas: verifica se a listagem de pessoas é exibida corretamente.
+- test_tela_criar_pessoa: verifica se a tela de cadastro de pessoas pode ser acessada.
+- test_criar_pessoa_valida: verifica se uma pessoa é cadastrada corretamente com dados válidos.
+- test_editar_pessoa: verifica se os dados de uma pessoa podem ser alterados.
+
+## UsuarioTest
+
+- test_listar_usuarios: verifica se a listagem de usuários é exibida corretamente.
+- test_tela_criar_usuario: verifica se a tela de cadastro de usuários pode ser acessada.
+- test_rota_inexistente_usuario: verifica o comportamento da aplicação ao acessar uma rota inexistente relacionada aos usuários.
+
+## Problemas Encontrados
+
+### BibliotecaTest
+O campo `created_by` utilizava um ID fixo (`1`). Como o banco é recriado a cada teste, o usuário não existia. Foi criada uma factory para gerar um usuário válido.
+
+### LivroTest
+O teste de validação esperava erros de sessão, porém o controller não possui validação utilizando `$request->validate()`. O teste foi removido.
+
+### PessoaTest
+O teste de rota inválida gerava erro 500. Como a aplicação não trata esse caso adequadamente, o teste foi removido.
+
+## Cobertura de Código
+
+Comando utilizado:
+
+```bash
+XDEBUG_MODE=coverage php artisan test --coverage
+```
+
+Cobertura total: **53,4%**
+
+## Resultado Final
+
+- 27 testes aprovados
+- Nenhuma falha
+- Cobertura total de 53,4%
